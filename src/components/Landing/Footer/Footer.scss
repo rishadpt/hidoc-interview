@@ -1,0 +1,78 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    .footer__main{
+        display: grid;
+        grid-template-areas: "logo reach features"
+            "foot foot foot";
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: auto auto;
+        padding: 1.5rem;
+        background: #091734;
+        color: #fff;
+        grid-column-gap: 4rem;
+    }
+    .logo__container {
+        grid-area: logo;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo__image {
+        width: 8rem;
+        height: 3rem;
+    }
+
+    .logo__para {
+        font-size: 0.7rem;
+
+    }
+
+    .logo__social__container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .logo__social {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border: 1px solid #fff;
+    }
+
+    .reach__container {
+        grid-area: reach;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .reach__item {
+        font-size: 0.8rem;
+    }
+
+    .reach__head {
+        color: #076b8a;
+    }
+
+    .features__container {
+        grid-area: features;
+        display: flex;
+        justify-content: center;
+    }
+
+    .copyright__container {
+        grid-area: foot;
+        background:#cfd8dd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #000;
+        font-size:0.6rem;
+        padding: 0.5rem;
+    }
+}

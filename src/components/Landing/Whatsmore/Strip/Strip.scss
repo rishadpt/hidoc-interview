@@ -1,0 +1,24 @@
+.strip-container {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    gap: 2rem;
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 1rem;
+    img {
+        height: 3rem;
+        object-fit: contain;
+    }
+
+    .strip__elements__head {
+        font-weight: bold;
+    }
+
+    .strip__elements__para {
+        font-weight: 500;
+    }
+}
+.strip__no__border{
+    border-bottom: none;
+}
