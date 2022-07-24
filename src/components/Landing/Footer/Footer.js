@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="footer__main">
 
             <div className="logo__container">
-                <img className="logo__image" src="/images/dr.jpeg" alt="" />
+                <img className="logo__image" src="/images/logodr.png" alt="" />
                 <p className="logo__para" >Fastest Growing Medical Platform for Doctors</p>
                 <div className="logo__social__container">
                     <div className="logo__social">

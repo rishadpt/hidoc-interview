@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { newsServices } from '../../utils/Services'
 import Header from '../Header/Header'
 import NewsLayout from '../NewsLayout/NewsLayout'
@@ -10,12 +9,14 @@ import Whatsmore from './Whatsmore/Whatsmore'
 export default function Landing() {
   const [news, setNews] = useState([])
   const [latest, setLatest] = useState([])
+  const [explore,setExplore] = useState([])
 
   useEffect(() => {
     newsServices.getNews().then(
       data => {
         setNews(data.data.news)
         setLatest(data.data.latestArticle)
+        setExplore(data.data.exploreArticle)
       }
     )
   }, [])
@@ -45,11 +46,8 @@ export default function Landing() {
         <div className="news__container">
           <NewsLayout head="Latest News" >    {/* Using Section Layout */}
             {latest && latest.map((item, index) => (
-              <Link className={"news__items__latest " + (index === 4 ? "news__items__latest__noborder" : null)} to={item.redirectLink} >
-                {item.articleTitle}
-              </Link>
-            ))}
-
+              <p onClick={()=>window.open(item.redirectLink)} className={"news__items__latest news__items__fix " + (index === 4 ? "news__items__latest__noborder" : null)}>{item.articleTitle}</p>))}
+        
           </NewsLayout>
           <NewsLayout head="Trending News" >
             <img className="layout__image" src="/images/dr.jpeg" alt="" />
@@ -67,11 +65,12 @@ export default function Landing() {
 
           <div className="explore-container">
             <NewsLayout head="Explore More in News" >
-              {[...Array(3)].map((i, index) => (<div>
-                <p className="news__items__head">Lorem Ipsum is simply dummy text</p>
-                <p className={"news__items__latest " + (index === 2 ? "news__items__latest__noborder" : null)}>
-                  Lorem Ipsum is Lorem Ipsum, Lorem Ipsum
-                  dummy text of the printing and typesetting industry.
+              {explore && explore.map((item, index) => (
+              <div className="news__item__container">
+                <p className="news__items__head">{item.articleTitle}</p>
+        
+                <p onClick={()=>{window.open(item.redirectLink)}} className={"news__items__latest " + (index === 1 ? "news__items__latest__noborder" : null)}>
+                 {item.articleDescription.replace(/^(.{200}[^\s]*).*/, "$1")}
                 </p>
               </div>))}
 

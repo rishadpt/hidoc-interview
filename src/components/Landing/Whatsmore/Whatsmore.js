@@ -12,7 +12,7 @@ export default function Whatsmore() {
                 <div className="whatsmore__blocks">
                     <h4>News</h4>
                     <p className="whatsmore__para">
-                        urvived not he 1960s with the release of Letraset sheets ntly with  like Aldus PageMaker including versions of Lorem Ipsumonly five centuries,he 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+                        urvived not he  of Lorem Ipsumonly five centuries,he 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum but also the leap into electronic typesetting, remaining essentially unchanged. It was
                     </p>
                 </div>
                 <div className="whatsmore__blocks1">

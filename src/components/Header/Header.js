@@ -18,7 +18,9 @@ export default function Header() {
   ]
   return (
     <div className="nav-container">
-      <Link to='/'>logo </Link>
+      <Link to='/'>
+        <img src="/images/hdlogo.png" alt=""/>
+         </Link>
       <div className="nav__items__container">
         {head && head.map((item, index) => (
           <Link key={index} style={{ border: index === 8 ? 'none' : null }} className={"nav__items " + (index === 4 ? "nav__items__news" : null)} to='/'>{item}</Link>))}

@@ -1,11 +1,16 @@
+@import '/src/sass/variables';
+
 .landing-container {
     background-color: #f4f4f4;
+
     .landing__main {
         padding-top: 5.5rem;
 
 
         .landing__head__news {
             margin-bottom: 2rem;
+            font-family: $head;
+            font-size: 2rem;
         }
     }
 
@@ -20,8 +25,9 @@
         gap: 2rem;
 
         img {
-            width: 60%;
+            width: 100%;
             height: 14rem;
+            object-fit: cover;
         }
     }
 
@@ -30,7 +36,6 @@
         flex-direction: column;
 
         p {
-            font-size: 0.7rem;
             font-weight: 500;
             line-height: 1.5rem;
             color: #000;
@@ -45,6 +50,7 @@
         line-height: 1.5rem;
         color: rgb(35, 208, 205);
         cursor: pointer;
+
         &:hover {
             text-decoration: underline;
         }
@@ -55,9 +61,9 @@
 
         .news__container {
             margin-top: 5rem;
-            display: flex;
-            justify-content: center;
             gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             padding: 2rem 0rem;
             border-top: 1px solid #000;
             padding-bottom: 4rem;
@@ -66,13 +72,20 @@
         .news__items__latest {
             border-bottom: 1px solid #000;
             padding-bottom: 0.5rem;
-            font-size: 0.8rem;
             cursor: pointer;
             text-decoration: none;
             color: #000;
+
             &:hover {
                 color: #00b8d4;
             }
+            .news__items__head:hover{
+                color: #00b8d4;
+            }
+        }
+
+        .news__items__fix {
+            height: 100%;
         }
 
         .news__items__latest__noborder {
@@ -81,36 +94,44 @@
 
         .layout__image {
             width: 100%;
-            height: 10rem;
+            width: 100%;
+            aspect-ratio: 3/1;
+            object-fit: cover;
+            height: 100%;
         }
 
         .trending__image__content {
             display: flex;
             gap: 1rem;
             padding-bottom: 0.5rem;
+
             &:hover {
                 color: #00b8d4;
             }
+        
         }
 
         .trending__image {
             width: 6rem;
-            height: 3rem;
-        }
-
-        .trending__text {
-            font-size: 0.8rem;
+            height: 100%;
+            object-fit: contain;
         }
 
         .news__items__head {
-            font-size: 0.8rem;
             font-weight: 600;
         }
-        .explore-container{
-            width: 100%;
 
+        .explore-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        .explore__button{
+
+        .news__item__container {
+            height: 100%;
+        }
+
+        .explore__button {
             margin-top: 0.5rem;
             padding: 0.8rem;
             background-color: #00b8d4;

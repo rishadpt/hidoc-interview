@@ -9,7 +9,13 @@
     padding: 0 1rem;
     z-index: 100;
     gap: 2.5rem;
-    
+    justify-content: space-between;
+    padding-right: 8rem;
+    img{
+        width: 4rem;
+        height: 1.3rem;
+        object-fit: contain;
+    }
 
     .nav__items {
         text-decoration: none;

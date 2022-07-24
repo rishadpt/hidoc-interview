@@ -3,9 +3,10 @@
     display: flex;
     height: 100%;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
     border-bottom: 1.5px solid #000;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+
     img {
         height: 3rem;
         object-fit: contain;
@@ -13,12 +14,14 @@
 
     .strip__elements__head {
         font-weight: bold;
+        font-size: 1rem;
     }
 
     .strip__elements__para {
         font-weight: 500;
     }
 }
-.strip__no__border{
+
+.strip__no__border {
     border-bottom: none;
 }
