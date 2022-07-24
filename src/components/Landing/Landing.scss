@@ -65,12 +65,12 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             padding: 2rem 0rem;
-            border-top: 1px solid #000;
+            border-top: 2px solid #b7b7b7;
             padding-bottom: 4rem;
         }
 
         .news__items__latest {
-            border-bottom: 1px solid #000;
+            border-bottom: 2px solid #b7b7b7;
             padding-bottom: 0.5rem;
             cursor: pointer;
             text-decoration: none;
@@ -138,7 +138,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid #000;
+            border: 2px solid #b7b7b7;
             font-weight: 600;
             cursor: pointer;
         }
